@@ -1,0 +1,10 @@
+{
+  "$schema": "@angular-devkit/architect/src/builders-schema.json",
+  "builders": {
+    "nyan": {
+      "implementation": "./nyan-builder.js",
+      "schema": "./schema.json",
+      "description": "Add description later"
+    }
+  }
+}

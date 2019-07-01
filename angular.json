@@ -3,41 +3,6 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nyan-builder": {
-      "projectType": "library",
-      "root": "projects/nyan-builder",
-      "sourceRoot": "projects/nyan-builder/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "projects/nyan-builder/tsconfig.lib.json",
-            "project": "projects/nyan-builder/ng-package.json"
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "projects/nyan-builder/src/test.ts",
-            "tsConfig": "projects/nyan-builder/tsconfig.spec.json",
-            "karmaConfig": "projects/nyan-builder/karma.conf.js"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "projects/nyan-builder/tsconfig.lib.json",
-              "projects/nyan-builder/tsconfig.spec.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
-          }
-        }
-      }
-    },
     "demo": {
       "projectType": "application",
       "schematics": {},
@@ -46,7 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "nyan-builder:nyan",
           "options": {
             "outputPath": "dist/demo",
             "index": "projects/demo/src/index.html",
@@ -151,5 +116,5 @@
         }
       }
     }},
-  "defaultProject": "nyan-builder"
+  "defaultProject": "demo"
 }
