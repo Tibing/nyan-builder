@@ -11,7 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "nyan-builder:nyan",
+          "builder": "nyan-builder:browser",
           "options": {
             "outputPath": "dist/demo",
             "index": "projects/demo/src/index.html",
@@ -56,7 +56,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "nyan-builder:dev-server",
           "options": {
             "browserTarget": "demo:build"
           },

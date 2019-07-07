@@ -31,6 +31,6 @@ export class DeferredLogger implements LoggerApi {
   }
 
   logLastMessage() {
-    this.logger.info(this.lastLog);
+    console.log(this.lastLog);
   }
 }
