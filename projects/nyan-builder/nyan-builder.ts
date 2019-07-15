@@ -1,5 +1,5 @@
 import { BuilderContext } from '@angular-devkit/architect';
-import { executeBrowserBuilder, ExecutionTransformer } from '@angular-devkit/build-angular';
+import { ExecutionTransformer } from '@angular-devkit/build-angular';
 import { WebpackLoggingCallback } from '@angular-devkit/build-webpack';
 import { createBrowserLoggingCallback } from '@angular-devkit/build-angular/src/browser';
 import { Observable, Subject } from 'rxjs';
@@ -23,9 +23,7 @@ export function createNyanBuilder<T, R>(builder: Builder<T, R>) {
     const logging = createBrowserLoggingCallback(!!options.verbose, deferredLogger);
 
     const percent$ = new Subject<number>();
-    // @ts-ignore
-    const multiplier = builder === executeBrowserBuilder ? 2 : 1;
-    const nyan = new NyanCat(percent$, multiplier);
+    const nyan = new NyanCat(percent$);
 
     options.progress = false;
     const progressPlugin: ProgressPlugin = new ProgressPlugin(percent$);
@@ -55,13 +53,12 @@ export function createNyanBuilder<T, R>(builder: Builder<T, R>) {
 
 export class NyanCat {
 
-  private prog: number;
+  private prog = 0;
   private progress = nyanProgress();
 
-  constructor(private percent$: Observable<number>,
-              private multiplier: number) {
+  constructor(private percent$: Observable<number>) {
     this.progress.start({
-      width: 80,
+      width: process.stdout.columns - 20,
 
       // Disable auto rendering
       renderThrottle: Number.MAX_SAFE_INTEGER,
@@ -70,13 +67,11 @@ export class NyanCat {
       .pipe(distinctUntilChanged())
       .subscribe(p => {
         if (p === 0) {
-          this.prog = 0;
-          this.tick(p - this.prog);
           console.clear();
-        } else {
-          this.tick(p - this.prog);
-          this.prog = p;
         }
+
+        this.tick(p - this.prog);
+        this.prog = p;
       });
   }
 
