@@ -73,7 +73,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "nyan-builder:karma",
           "options": {
             "main": "projects/demo/src/test.ts",
             "polyfills": "projects/demo/src/polyfills.ts",
@@ -115,6 +115,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "demo"
 }

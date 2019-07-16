@@ -4,12 +4,22 @@
     "browser": {
       "implementation": "./browser/index.js",
       "schema": "./browser/schema.json",
-      "description": "Add description later"
+      "description": "Build a browser app."
     },
     "dev-server": {
       "implementation": "./dev-server/index.js",
       "schema": "./dev-server/schema.json",
-      "description": "Add description later"
+      "description": "Serve a browser app."
+    },
+    "karma": {
+      "implementation": "./karma/index.js",
+      "schema": "./karma/schema.json",
+      "description": "Run Karma unit tests."
+    },
+    "server": {
+      "implementation": "./server/index.js",
+      "schema": "./server/schema.json",
+      "description": "Build a server Angular application."
     }
   }
 }

@@ -3,11 +3,10 @@ import { BrowserBuilderOptions, executeBrowserBuilder } from '@angular-devkit/bu
 import { json } from '@angular-devkit/core';
 import { Observable } from 'rxjs';
 
-import { createNyanBuilder } from '../nyan-builder';
+import { nyan } from '../nyan';
 
 function createBrowserPanel(options: BrowserBuilderOptions, context: BuilderContext): Observable<BuilderOutput> {
-  const executeNyanBuilder = createNyanBuilder(executeBrowserBuilder);
-  return executeNyanBuilder(options, context);
+  return nyan(executeBrowserBuilder)(options, context);
 }
 
 export default createBuilder<json.JsonObject & BrowserBuilderOptions>(createBrowserPanel);
