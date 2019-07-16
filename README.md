@@ -1,6 +1,6 @@
 # Angular CLI Nyan Builder 👇
 
-![nyan gif](nyan.gif)
+![nyan gif](nyan-demo.gif)
 
 ## Installation
 
