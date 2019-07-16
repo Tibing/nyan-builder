@@ -1,6 +1,6 @@
 {
   "name": "nyan-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Nyan Builder for your next Angular application!",
   "main": "index.js",
   "repository": "git@github.com:Tibing/nyan-builder.git",

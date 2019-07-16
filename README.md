@@ -11,7 +11,6 @@
   - Karma: `"builder": "nyan-builder:karma"`
   - Server: `"builder": "nyan-builder:server"`
   
-  
 ## How can I support the developer?
 
 - Create pull requests, submit bugs, suggest new features or documentation updates 🔧
