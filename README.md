@@ -5,11 +5,68 @@
 ## Installation
 
 - `npm i nyan-builder`
-- Register builder itself. Just :
-  - Browser: `"builder": "nyan-builder:browser"`
-  - Dev Server: `"builder": "nyan-builder:dev-server"`
-  - Karma: `"builder": "nyan-builder:karma"`
-  - Server: `"builder": "nyan-builder:server"`
+- Register builder itself:
+
+  - Browser
+```json
+"projects": {
+  ...
+  "example-app": {
+    ...
+    "architect": {
+      ...
+      "build": {
+        "builder": "nyan-builder:browser"
+        "options": {
+              ...
+        }
+```
+
+  - Dev Server: 
+```json
+"projects": {
+  ...
+  "example-app": {
+    ...
+    "architect": {
+      ...
+      "build": {
+        "builder": "nyan-builder:dev-server"
+        "options": {
+              ...
+        }
+```
+
+  - Karma: 
+```json
+"projects": {
+  ...
+  "example-app": {
+    ...
+    "architect": {
+      ...
+      "build": {
+        "builder": "nyan-builder:karma"
+        "options": {
+              ...
+        }
+```
+
+  - Server: 
+```json
+"projects": {
+  ...
+  "example-app": {
+    ...
+    "architect": {
+      ...
+      "build": {
+        "builder": "nyan-builder:server"
+        "options": {
+              ...
+        }
+```
+
   
 ## How can I support the developer?
 
