@@ -4,7 +4,7 @@
 
 ## Installation
 
-- `npm i nyan-builder`
+- `npm i -D nyan-builder`
 - Register builder itself:
 
   - Browser
