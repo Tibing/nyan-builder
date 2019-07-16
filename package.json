@@ -4,9 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build:nyan-builder": "tsc -p tsconfig.builder.json && npm run resolve-schemas",
+    "build:nyan-builder": "tsc -p tsconfig.builder.json && npm run resolve-schemas && npm run copy-readmy",
     "link:nyan-builder": "npm link dist/nyan-builder && npm link nyan-builder",
     "resolve-schemas": "node ./resolve-schema.js",
+    "copy-readmy": "cp README.md ./dist/nyan-builder",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

@@ -1,13 +1,15 @@
 {
   "name": "nyan-builder",
   "version": "1.0.0",
-  "description": "",
+  "description": "Nyan Builder for your next Angular application!",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "repository": "git@github.com:Tibing/nyan-builder.git",
+  "keywords": [
+    "angular",
+    "angular-cli",
+    "angular-builders"
+  ],
+  "author": "Nikita Poltoratsky",
+  "license": "MIT",
   "builders": "builders.json"
 }
