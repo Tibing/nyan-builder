@@ -1,9 +1,3 @@
-/*
- * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- */
-
 import { Tree } from '@angular-devkit/schematics';
 import { readJSON, writeJSON } from './file';
 
@@ -20,9 +14,6 @@ export function version(): string {
   return getPackageJson().version;
 }
 
-/**
- * Gets the version of the specified Nebular peerDependency
- * */
 export function getPeerDependencyVersionFromPackageJson(packageName: string): string {
   const packageJson: PackageJson = getPackageJson();
 

@@ -1,9 +1,3 @@
-/*
- * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- */
-
 import { Tree } from '@angular-devkit/schematics';
 
 function throwFileNotFoundError(fileName: string) {
@@ -35,7 +29,7 @@ export function readJSON(tree: Tree, fileName: string, encoding: string = 'utf8'
  * Writes specified files to the given tree
  * */
 export function writeText(tree: Tree, fileName: string, content: string) {
-  tree.overwrite(fileName, content)
+  tree.overwrite(fileName, content);
 }
 
 /**

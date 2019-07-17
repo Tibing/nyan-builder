@@ -1,9 +1,3 @@
-/*
- * @license
- * Copyright Akveo. All Rights Reserved.
- * Licensed under the MIT License. See License.txt in the project root for license information.
- */
-
 import { Tree } from '@angular-devkit/schematics';
 import { WorkspaceProject } from '@angular-devkit/core/src/experimental/workspace';
 import { getWorkspace } from '@schematics/angular/utility/config';

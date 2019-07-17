@@ -2,5 +2,14 @@
   "$schema": "http://json-schema.org/schema",
   "id": "ng-add",
   "title": "Nyan Builder ng-add schematics",
-  "type": "object"
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "description": "The name of the project.",
+      "$default": {
+        "$source": "projectName"
+      }
+    }
+  }
 }
