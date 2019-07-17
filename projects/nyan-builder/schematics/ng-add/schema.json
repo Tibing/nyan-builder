@@ -1,0 +1,6 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "ng-add",
+  "title": "Nyan Builder ng-add schematics",
+  "type": "object"
+}

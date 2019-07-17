@@ -11,7 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "nyan-builder:browser",
+          "builder": "",
           "options": {
             "outputPath": "dist/demo",
             "index": "projects/demo/src/index.html",
@@ -56,7 +56,7 @@
           }
         },
         "serve": {
-          "builder": "nyan-builder:dev-server",
+          "builder": "",
           "options": {
             "browserTarget": "demo:build"
           },
@@ -73,7 +73,7 @@
           }
         },
         "test": {
-          "builder": "nyan-builder:karma",
+          "builder": "",
           "options": {
             "main": "projects/demo/src/test.ts",
             "polyfills": "projects/demo/src/polyfills.ts",
