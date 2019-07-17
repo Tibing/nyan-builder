@@ -4,6 +4,12 @@
 
 ## Installation
 
+### Angular CLI
+
+`ng add nyan-builder`
+
+### Manually
+
 - `npm i -D nyan-builder`
 - Register builder itself:
 
